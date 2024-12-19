@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>BOGO</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+      .body {
+        margin: 50px;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+        color: #ff6b82;
+        width: 60%;
+        text-align: center;
+      }
+      hr,
+      h1 {
+        width: 100%;
+      }
+      .notHidden {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .item1,
+      .item2,
+      .item3 {
+        border: 2px solid grey;
+        align-items: center;
+        width: 60%;
+        padding: 20px;
+      }
+      #itemLists {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      .select {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .heading {
+        display: flex;
+        gap: 45px;
+        padding: 5px;
+        margin-left: 35px;
+      }
+      .p {
+        width: 20px;
+      }
+      .option {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+      }
+      span {
+        background: #ff6b82;
+        color: white;
+        padding: 4px 6px;
+        border-radius: 6px;
+      }
+      select {
+        padding: 5px;
+        border-radius: 3px;
+      }
+      label {
+        font-weight: bold;
+      }
+      label,
+      .select > div > p {
+        padding: 5px;
+      }
+      .price {
+        color: grey;
+        text-decoration: line-through;
+        font-size: small;
+      }
+      .hidden {
+        display: none;
+      }
+      .Checkout {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+      }
+      button {
+        padding: 10px;
+        width: 60%;
+        background-color: #ff6b82;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      .cart {
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+      }
+      .trademark {
+        display: flex;
+        width: 60%;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="header">
+        <hr />
+        <h1>Yay! It's BOGO</h1>
+        <hr />
+      </div>
+      <!-- first item -->
+      <div id="itemLists">
+        <div class="item1">
+          <div class="notHidden">
+            <div class="select">
+              <div>
+                <input
+                  type="radio"
+                  name="unit"
+                  onclick="showHiddenContent(1)"
+                />
+              </div>
+              <div>
+                <label for="unit1">1 Unit</label> <span>10% Off</span>
+                <p>standard price</p>
+              </div>
+            </div>
+            <div>
+              <p>$10.00 USD</p>
+              <p class="price">$24.00 USD</p>
+            </div>
+          </div>
+          <div id="hidden1" class="hidden">
+            <div class="container">
+              <div class="heading">
+                <h3>size</h3>
+                <h3>color</h3>
+              </div>
+              <div class="option">
+                <p class="p">#1</p>
+                <select>
+                  <option value="">Select</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select>
+                  <option value="">Select</option>
+                  <option value="Red">Red</option>
+                  <option value="Black">Black</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+              <div class="option">
+                <p class="p">#2</p>
+                <select>
+                  <option value="">Select</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select>
+                  <option value="">Select</option>
+                  <option value="Red">Red</option>
+                  <option value="Black">Black</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- second item -->
+      <div id="itemLists">
+        <div class="item2">
+          <div class="notHidden">
+            <div class="select">
+              <div>
+                <input
+                  type="radio"
+                  name="unit"
+                  onclick="showHiddenContent(2)"
+                />
+              </div>
+              <div><label for="unit2">2 Unit</label> <span>20% Off</span></div>
+            </div>
+            <div>
+              <p>$18.00 USD</p>
+              <p class="price">$24.00 USD</p>
+            </div>
+          </div>
+          <div id="hidden2" class="hidden">
+            <div class="container">
+              <div class="heading">
+                <h3>size</h3>
+                <h3>color</h3>
+              </div>
+              <div class="option">
+                <p class="p">#1</p>
+                <select>
+                  <option value="">Select</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select>
+                  <option value="">Select</option>
+                  <option value="Red">Red</option>
+                  <option value="Black">Black</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+              <div class="option">
+                <p class="p">#2</p>
+                <select>
+                  <option value="">Select</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select>
+                  <option value="">Select</option>
+                  <option value="Red">Red</option>
+                  <option value="Black">Black</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- third item -->
+      <div id="itemLists">
+        <div class="item3">
+          <div class="notHidden">
+            <div class="select">
+              <div>
+                <input
+                  type="radio"
+                  name="unit"
+                  onclick="showHiddenContent(3)"
+                />
+              </div>
+              <div><label for="unit3">3 Unit</label> <span>30% Off</span></div>
+            </div>
+            <div>
+              <p>$24.00 USD</p>
+              <p class="price">$24.00 USD</p>
+            </div>
+          </div>
+          <div id="hidden3" class="hidden">
+            <div class="container">
+              <div class="heading">
+                <h3>size</h3>
+                <h3>color</h3>
+              </div>
+              <div class="option">
+                <p class="p">#1</p>
+                <select>
+                  <option value="">Select</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select>
+                  <option value="">Select</option>
+                  <option value="Red">Red</option>
+                  <option value="Black">Black</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+              <div class="option">
+                <p class="p">#2</p>
+                <select>
+                  <option value="">Select</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select>
+                  <option value="">Select</option>
+                  <option value="Red">Red</option>
+                  <option value="Black">Black</option>
+                  <option value="Green">Green</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <div class="Checkout">
+          <p style="color: #ff6b82">Free Delivery</p>
+          <p>Total : $18 USD</p>
+        </div>
+      </div>
+      <div class="cart">
+        <button>+ Add to cart</button>
+      </div>
+      <div class="trademark">
+        <p class="trade">@ Powered by Pumper</p>
+      </div>
+    </div>
+
+    <script>
+      function showHiddenContent(radioNumber) {
+        // Hide all hidden elements
+        document
+          .querySelectorAll(".hidden")
+          .forEach((el) => el.classList.add("hidden"));
+
+        // Show the selected hidden element
+        document
+          .getElementById("hidden" + radioNumber)
+          .classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>
