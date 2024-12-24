@@ -17,8 +17,20 @@
         font-family: "Inter", sans-serif;
       }
       .body {
-        margin: 50px;
-      }
+  margin: 50px;
+  position: relative;
+  min-height: 100vh; /* Ensure it takes up the full viewport height */
+}
+
+.trademark {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  /* bottom: 20px; Adjust the value as needed */
+  right: 0%;
+  width: 100%;
+}
+
       .header {
         display: flex;
         justify-content: center;
@@ -322,16 +334,16 @@
     </div>
 
     <script>
-      function showHiddenContent(radioNumber) {
+function showHiddenContent(radioNumber) {
   // Hide all hidden elements
-  document.querySelectorAll(".hidden").forEach((el) => el.classList.add("hidden"));
+  document.querySelectorAll('[id^="hidden"]').forEach((el) => el.classList.add("hidden"));
+  // it selects all id that starts with hidden.
 
   // Show the selected hidden element
-  document.querySelectorAll(".hidden").forEach((el) => el.classList.add("hidden"));
-  document.querySelectorAll(`[id^="hidden"]`).forEach((el) => el.classList.add("hidden"));
-
   document.getElementById("hidden" + radioNumber).classList.remove("hidden");
+  //hidden+1 = hidden1
 }
+
 
     </script>
   </body>
