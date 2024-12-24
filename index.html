@@ -323,16 +323,16 @@
 
     <script>
       function showHiddenContent(radioNumber) {
-        // Hide all hidden elements
-        document
-          .querySelectorAll(".hidden")
-          .forEach((el) => el.classList.add("hidden"));
+  // Hide all hidden elements
+  document.querySelectorAll(".hidden").forEach((el) => el.classList.add("hidden"));
 
-        // Show the selected hidden element
-        document
-          .getElementById("hidden" + radioNumber)
-          .classList.remove("hidden");
-      }
+  // Show the selected hidden element
+  document.querySelectorAll(".hidden").forEach((el) => el.classList.add("hidden"));
+  document.querySelectorAll(`[id^="hidden"]`).forEach((el) => el.classList.add("hidden"));
+
+  document.getElementById("hidden" + radioNumber).classList.remove("hidden");
+}
+
     </script>
   </body>
 </html>
